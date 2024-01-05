@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b6455ad64fb55bdc8841733be84da875",
+    "content-hash": "1d7212d809456b08f4d95f381ddb373f",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -295,10 +295,16 @@
         {
             "name": "gemini-d/plt-common",
             "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gemini-D/plt-common.git",
+                "reference": "13ef2ddda27fd8cdca2b2366dddfb761082a84a8"
+            },
             "dist": {
-                "type": "path",
-                "url": "../plt-common",
-                "reference": "782b2f67e47fd8cc9cd8a8da34a33a64bb126b91"
+                "type": "zip",
+                "url": "https://api.github.com/repos/Gemini-D/plt-common/zipball/13ef2ddda27fd8cdca2b2366dddfb761082a84a8",
+                "reference": "13ef2ddda27fd8cdca2b2366dddfb761082a84a8",
+                "shasum": ""
             },
             "require": {
                 "hyperf/config": "^3.1",
@@ -318,10 +324,14 @@
             "suggest": {
                 "swow/swow": "Required to create swow components."
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "hyperf": {
                     "config": "GeminiD\\PltCommon\\ConfigProvider"
+                },
+                "branch-alias": {
+                    "dev-main": "1.0-dev"
                 }
             },
             "autoload": {
@@ -329,22 +339,7 @@
                     "GeminiD\\PltCommon\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "HyperfTest\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "phpunit -c phpunit.xml --colors=always"
-                ],
-                "analyse": [
-                    "phpstan analyse --memory-limit 1024M -l 0 ./src"
-                ],
-                "cs-fix": [
-                    "php-cs-fixer fix $1"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -352,9 +347,11 @@
                 "hyperf",
                 "php"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/Gemini-D/plt-common/issues",
+                "source": "https://github.com/Gemini-D/plt-common/tree/main"
+            },
+            "time": "2024-01-05T14:00:09+00:00"
         },
         {
             "name": "graham-campbell/result-type",
