@@ -11,5 +11,9 @@ declare(strict_types=1);
  */
 return [
     'http' => [
+        Han\Utils\Middleware\RequestHandledDebugMiddleware::class,
+    ],
+    'rpc' => [
+        Han\Utils\Middleware\RequestHandledDebugMiddleware::class,
     ],
 ];

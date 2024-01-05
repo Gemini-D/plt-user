@@ -19,6 +19,7 @@
         "ext-pdo_mysql": "*",
         "ext-redis": "*",
         "ext-swoole": ">=5.0",
+        "gemini-d/plt-common": "dev-main",
         "hyperf/async-queue": "3.1.*",
         "hyperf/cache": "3.1.*",
         "hyperf/command": "3.1.*",
@@ -43,8 +44,11 @@
         "hyperf/pool": "3.1.*",
         "hyperf/process": "3.1.*",
         "hyperf/redis": "3.1.*",
+        "hyperf/rpc-log-listener": "^1.0",
+        "hyperf/rpc-multiplex": "3.1.*",
         "hyperf/server": "3.1.*",
-        "hyperf/utils": "3.1.*"
+        "hyperf/utils": "3.1.*",
+        "limingxinleo/hyperf-utils": "^3.9"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
@@ -86,5 +90,11 @@
         "start": "php ./bin/hyperf.php start",
         "test": "co-phpunit --prepend test/bootstrap.php --colors=always",
         "rector": "rector process --clear-cache"
+    },
+    "repositories": {
+        "common": {
+            "type": "path",
+            "url": "../plt-common"
+        }
     }
 }
