@@ -298,12 +298,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Gemini-D/plt-common.git",
-                "reference": "13ef2ddda27fd8cdca2b2366dddfb761082a84a8"
+                "reference": "b2ebca6e9e8e03595fe6463166278834f1e6bdd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Gemini-D/plt-common/zipball/13ef2ddda27fd8cdca2b2366dddfb761082a84a8",
-                "reference": "13ef2ddda27fd8cdca2b2366dddfb761082a84a8",
+                "url": "https://api.github.com/repos/Gemini-D/plt-common/zipball/b2ebca6e9e8e03595fe6463166278834f1e6bdd1",
+                "reference": "b2ebca6e9e8e03595fe6463166278834f1e6bdd1",
                 "shasum": ""
             },
             "require": {
@@ -312,6 +312,7 @@
                 "hyperf/framework": "^3.1",
                 "hyperf/rpc-multiplex": "^3.1",
                 "hyperf/support": "^3.1",
+                "jetbrains/phpstorm-attributes": "^1.0",
                 "php": ">=8.1"
             },
             "require-dev": {
@@ -351,7 +352,7 @@
                 "issues": "https://github.com/Gemini-D/plt-common/issues",
                 "source": "https://github.com/Gemini-D/plt-common/tree/main"
             },
-            "time": "2024-01-05T14:00:09+00:00"
+            "time": "2024-01-06T04:28:03+00:00"
         },
         {
             "name": "graham-campbell/result-type",

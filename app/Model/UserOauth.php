@@ -13,11 +13,12 @@ declare(strict_types=1);
 namespace App\Model;
 
 use Carbon\Carbon;
+use GeminiD\PltCommon\Constant\OAuthType;
 
 /**
  * @property int $id
  * @property int $user_id
- * @property int $type
+ * @property OAuthType $type
  * @property string $appid
  * @property string $openid
  * @property Carbon $created_at
@@ -38,5 +39,5 @@ class UserOauth extends Model
     /**
      * The attributes that should be cast to native types.
      */
-    protected array $casts = ['id' => 'integer', 'user_id' => 'integer', 'type' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
+    protected array $casts = ['id' => 'integer', 'user_id' => 'integer', 'type' => OAuthType::class, 'created_at' => 'datetime', 'updated_at' => 'datetime'];
 }

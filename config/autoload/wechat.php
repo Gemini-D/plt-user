@@ -18,7 +18,7 @@ return [
         'token' => '',
         'aes_key' => '',
 
-        'use_stable_access_token' => false,
+        'use_stable_access_token' => true,
 
         'http' => [
             'throw' => true,
