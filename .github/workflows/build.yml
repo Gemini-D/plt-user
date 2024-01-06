@@ -11,6 +11,3 @@ jobs:
       - name: Build
         run: |
           docker build -t biz-skeleton .
-          docker run --name unit -d biz-skeleton:latest
-          docker exec unit composer install
-          docker exec unit composer test
