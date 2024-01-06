@@ -10,12 +10,10 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-namespace App\Controller;
+namespace App\Service\Dao;
 
-class IndexController extends Controller
+use Han\Utils\Service;
+
+class UserDao extends Service
 {
-    public function index()
-    {
-        return $this->response->success('用户服务');
-    }
 }

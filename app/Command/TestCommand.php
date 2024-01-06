@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace App\Command;
 
-use GeminiD\PltCommon\RPC\User\UserInterface;
+use Carbon\Carbon;
 use Hyperf\Command\Annotation\Command;
 use Hyperf\Command\Command as HyperfCommand;
 use Psr\Container\ContainerInterface;
@@ -33,8 +33,6 @@ class TestCommand extends HyperfCommand
 
     public function handle()
     {
-        $res = di()->get(UserInterface::class)->ping();
-
-        var_dump($res);
+        var_dump(Carbon::today()->getTimestamp());
     }
 }

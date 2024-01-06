@@ -25,6 +25,11 @@ enum ErrorCode: int implements ErrorCodeInterface
      */
     case SERVER_ERROR = 500;
 
+    /**
+     * @Message("微信小程序 AppID 不存在")
+     */
+    case WECHAT_APPID_NOT_EXIST = 1001;
+
     public function getMessage(array $translate = null): string
     {
         $arguments = [];
