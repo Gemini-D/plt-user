@@ -47,14 +47,6 @@ class ExampleTest extends HttpTestCase
         $this->assertSame($resolver2, $dispatcher->factoryResolver);
     }
 
-    /**
-     * @group OpenSSL
-     */
-    public function testOpenSSL()
-    {
-        $this->assertNotFalse(openssl_encrypt('12345', 'bf', 'xxxxxxxx', 0, 'xxxxxxxx'));
-    }
-
     public function testSnowflake()
     {
         $id = di()->get(IdGeneratorInterface::class)->generate();

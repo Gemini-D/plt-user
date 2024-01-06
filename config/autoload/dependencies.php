@@ -13,4 +13,5 @@ return [
     Hyperf\Contract\StdoutLoggerInterface::class => App\Kernel\Log\LoggerFactory::class,
     Hyperf\Server\Listener\AfterWorkerStartListener::class => App\Kernel\Http\WorkerStartListener::class,
     Psr\EventDispatcher\EventDispatcherInterface::class => App\Kernel\Event\EventDispatcherFactory::class,
+    Hyperf\Snowflake\MetaGeneratorInterface::class => App\Kernel\Factory\MetaGeneratorFactory::class,
 ];

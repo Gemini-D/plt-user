@@ -34,6 +34,6 @@ class MainCoroutineServerStartListener implements ListenerInterface
 
     public function process(object $event): void
     {
-        di()->get(WeChatService::class)->init();
+        di()->get(WeChatService::class);
     }
 }

@@ -19,6 +19,7 @@ use Han\Utils\Service;
 use Hyperf\Codec\Json;
 use Hyperf\Config\Annotation\Value;
 use JetBrains\PhpStorm\ArrayShape;
+use Psr\Container\ContainerInterface;
 
 class WeChatService extends Service
 {
@@ -30,8 +31,10 @@ class WeChatService extends Service
      */
     protected array $applications;
 
-    public function init(): void
+    public function __construct(ContainerInterface $container)
     {
+        parent::__construct($container);
+
         foreach ($this->configs as $config) {
             $this->applications[$config['app_id']] = new Application($config);
         }
