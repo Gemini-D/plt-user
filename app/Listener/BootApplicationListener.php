@@ -12,14 +12,14 @@ declare(strict_types=1);
 
 namespace App\Listener;
 
+use App\Service\SubService\WeChatService;
 use Hyperf\Event\Annotation\Listener;
 use Hyperf\Event\Contract\ListenerInterface;
-use Hyperf\Server\Event\MainCoroutineServerStart;
-use Hyperf\Snowflake\IdGeneratorInterface;
+use Hyperf\Framework\Event\BootApplication;
 use Psr\Container\ContainerInterface;
 
 #[Listener]
-class MainCoroutineServerStartListener implements ListenerInterface
+class BootApplicationListener implements ListenerInterface
 {
     public function __construct(protected ContainerInterface $container)
     {
@@ -28,12 +28,12 @@ class MainCoroutineServerStartListener implements ListenerInterface
     public function listen(): array
     {
         return [
-            MainCoroutineServerStart::class,
+            BootApplication::class,
         ];
     }
 
     public function process(object $event): void
     {
-        di()->get(IdGeneratorInterface::class);
+        di()->get(WeChatService::class);
     }
 }

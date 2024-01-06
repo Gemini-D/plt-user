@@ -24,12 +24,12 @@ use Psr\Container\ContainerInterface;
 class WeChatService extends Service
 {
     #[Value(key: 'wechat')]
-    protected array $configs;
+    protected array $configs = [];
 
     /**
      * @var array<string, Application>
      */
-    protected array $applications;
+    protected array $applications = [];
 
     public function __construct(ContainerInterface $container)
     {
