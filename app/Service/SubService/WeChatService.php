@@ -42,7 +42,7 @@ class WeChatService extends Service
 
     public function get(string $appid): Application
     {
-        if (! $this->applications[$appid]) {
+        if (empty($this->applications[$appid])) {
             throw new BusinessException(ErrorCode::WECHAT_APPID_NOT_EXIST);
         }
 
