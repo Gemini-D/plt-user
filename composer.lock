@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3851f5ee81cab04377e7372124d0f314",
+    "content-hash": "fa5d2ab0d6d948a800d3d32216ff395e",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -294,7 +294,7 @@
         },
         {
             "name": "gemini-d/plt-common",
-            "version": "dev-main",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Gemini-D/plt-common.git",
@@ -325,7 +325,6 @@
             "suggest": {
                 "swow/swow": "Required to create swow components."
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "hyperf": {
@@ -350,7 +349,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Gemini-D/plt-common/issues",
-                "source": "https://github.com/Gemini-D/plt-common/tree/main"
+                "source": "https://github.com/Gemini-D/plt-common/tree/v1.0.0"
             },
             "time": "2024-01-06T04:28:03+00:00"
         },
@@ -10628,7 +10627,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "gemini-d/plt-common": 20,
         "swoole/ide-helper": 20
     },
     "prefer-stable": true,
