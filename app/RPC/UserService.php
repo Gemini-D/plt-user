@@ -30,7 +30,7 @@ class UserService implements UserInterface
         return true;
     }
 
-    #[ArrayShape(['id' => 'int'])]
+    #[ArrayShape(['id' => 'int', 'openid' => 'string'])]
     public function firstByCode(string $code, string $appid, int|OAuthType $type = OAuthType::WECHAT_MINI_APP): array
     {
         if (is_int($type)) {
@@ -46,6 +46,7 @@ class UserService implements UserInterface
 
         return [
             'id' => $user->id,
+            'openid' => $res['openid'],
         ];
     }
 }
