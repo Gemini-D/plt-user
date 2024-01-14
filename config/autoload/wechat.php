@@ -27,4 +27,19 @@ return [
             'retry' => true,
         ],
     ],
+    [
+        'app_id' => env('MP2_APP_ID'),
+        'secret' => env('MP2_SECRET'),
+        'token' => '',
+        'aes_key' => '',
+
+        'use_stable_access_token' => true,
+
+        'http' => [
+            'throw' => true,
+            'timeout' => 5.0,
+
+            'retry' => true,
+        ],
+    ],
 ];
