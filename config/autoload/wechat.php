@@ -42,4 +42,19 @@ return [
             'retry' => true,
         ],
     ],
+    [
+        'app_id' => env('MP3_APP_ID'),
+        'secret' => env('MP3_SECRET'),
+        'token' => '',
+        'aes_key' => '',
+
+        'use_stable_access_token' => true,
+
+        'http' => [
+            'throw' => true,
+            'timeout' => 5.0,
+
+            'retry' => true,
+        ],
+    ],
 ];
