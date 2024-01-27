@@ -9,13 +9,16 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+use App\Exception\Handler\BusinessExceptionHandler;
+use App\Exception\Handler\RPCExceptionHandler;
+
 return [
     'handler' => [
         'http' => [
-            App\Exception\Handler\BusinessExceptionHandler::class,
+            BusinessExceptionHandler::class,
         ],
         'rpc' => [
-            App\Exception\Handler\RPCExceptionHandler::class,
+            RPCExceptionHandler::class,
         ],
     ],
 ];
