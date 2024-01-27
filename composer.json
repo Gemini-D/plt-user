@@ -44,13 +44,15 @@
         "hyperf/pool": "3.1.*",
         "hyperf/process": "3.1.*",
         "hyperf/redis": "3.1.*",
+        "hyperf/rpc": "3.1.x-dev",
+        "hyperf/rpc-client": "3.1.x-dev",
         "hyperf/rpc-log-listener": "^1.0",
-        "hyperf/rpc-multiplex": "3.1.*",
+        "hyperf/rpc-multiplex": "3.1.x-dev",
         "hyperf/server": "3.1.*",
         "hyperf/snowflake": "3.1.*",
         "hyperf/utils": "3.1.*",
-        "limingxinleo/hyperf-utils": "^3.9",
         "limingxinleo/easywechat-classmap": "^1.0",
+        "limingxinleo/hyperf-utils": "^3.9",
         "w7corp/easywechat": "^6.13"
     },
     "require-dev": {

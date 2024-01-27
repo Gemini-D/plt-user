@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa5d2ab0d6d948a800d3d32216ff395e",
+    "content-hash": "8f767a7777223750d520bc4418276004",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -3111,16 +3111,16 @@
         },
         {
             "name": "hyperf/rpc",
-            "version": "v3.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/rpc.git",
-                "reference": "f5a53e0122ca8987a807c67ebf80e35384d11529"
+                "reference": "b5b52e7e2ad32f8ccf1e139d843fc546e0486fc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/rpc/zipball/f5a53e0122ca8987a807c67ebf80e35384d11529",
-                "reference": "f5a53e0122ca8987a807c67ebf80e35384d11529",
+                "url": "https://api.github.com/repos/hyperf/rpc/zipball/b5b52e7e2ad32f8ccf1e139d843fc546e0486fc1",
+                "reference": "b5b52e7e2ad32f8ccf1e139d843fc546e0486fc1",
                 "shasum": ""
             },
             "require": {
@@ -3129,6 +3129,7 @@
                 "hyperf/support": "~3.1.0",
                 "php": ">=8.1"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -3169,20 +3170,20 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-11-24T03:10:53+00:00"
+            "time": "2024-01-26T05:07:53+00:00"
         },
         {
             "name": "hyperf/rpc-client",
-            "version": "v3.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/rpc-client.git",
-                "reference": "acaae6f774ab21e906a4ae24548e904c9ded7051"
+                "reference": "f1eb150a21b6cbbf71c95ad32d8ff48564fd6ca9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/rpc-client/zipball/acaae6f774ab21e906a4ae24548e904c9ded7051",
-                "reference": "acaae6f774ab21e906a4ae24548e904c9ded7051",
+                "url": "https://api.github.com/repos/hyperf/rpc-client/zipball/f1eb150a21b6cbbf71c95ad32d8ff48564fd6ca9",
+                "reference": "f1eb150a21b6cbbf71c95ad32d8ff48564fd6ca9",
                 "shasum": ""
             },
             "require": {
@@ -3199,6 +3200,7 @@
                 "hyperf/pool": "Required to use connection pool.",
                 "hyperf/service-governance": "Required to fetch the nodes info from service governance."
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -3243,7 +3245,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-11-24T03:10:53+00:00"
+            "time": "2024-01-26T05:07:53+00:00"
         },
         {
             "name": "hyperf/rpc-log-listener",
@@ -3304,16 +3306,16 @@
         },
         {
             "name": "hyperf/rpc-multiplex",
-            "version": "v3.1.7",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/rpc-multiplex.git",
-                "reference": "6e649c9a2b7269580dc982f7037bfd1475dcc7b7"
+                "reference": "78bf25a2b2a9d35682ae148341b6f76f7a521582"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/rpc-multiplex/zipball/6e649c9a2b7269580dc982f7037bfd1475dcc7b7",
-                "reference": "6e649c9a2b7269580dc982f7037bfd1475dcc7b7",
+                "url": "https://api.github.com/repos/hyperf/rpc-multiplex/zipball/78bf25a2b2a9d35682ae148341b6f76f7a521582",
+                "reference": "78bf25a2b2a9d35682ae148341b6f76f7a521582",
                 "shasum": ""
             },
             "require": {
@@ -3331,6 +3333,7 @@
                 "php": ">=8.1",
                 "swow/psr7-plus": "^1.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "hyperf": {
@@ -3356,7 +3359,7 @@
             ],
             "support": {
                 "issues": "https://github.com/hyperf/rpc-multiplex/issues",
-                "source": "https://github.com/hyperf/rpc-multiplex/tree/v3.1.7"
+                "source": "https://github.com/hyperf/rpc-multiplex/tree/master"
             },
             "funding": [
                 {
@@ -3368,7 +3371,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-01-25T07:23:31+00:00"
+            "time": "2024-01-26T05:07:53+00:00"
         },
         {
             "name": "hyperf/rpc-server",
@@ -10621,6 +10624,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "hyperf/rpc": 20,
+        "hyperf/rpc-client": 20,
+        "hyperf/rpc-multiplex": 20,
         "swoole/ide-helper": 20
     },
     "prefer-stable": true,
