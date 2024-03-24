@@ -14,16 +14,14 @@ namespace App\Service\SubService;
 
 use App\Constants\ErrorCode;
 use App\Exception\BusinessException;
-use EasyWeChat\MiniApp\Application;
+use Fan\DouYin\OpenApi\Application;
 use Han\Utils\Service;
-use Hyperf\Codec\Json;
 use Hyperf\Config\Annotation\Value;
-use JetBrains\PhpStorm\ArrayShape;
 use Psr\Container\ContainerInterface;
 
-class WeChatService extends Service
+class DouYinService extends Service
 {
-    #[Value(key: 'wechat')]
+    #[Value(key: 'douyin')]
     protected array $configs = [];
 
     /**
@@ -49,19 +47,22 @@ class WeChatService extends Service
         return $this->applications[$appid];
     }
 
-    #[ArrayShape(['openid' => 'string'])]
-    public function login(string $code, string $appid)
+    public function login(string $code, string $appid): array
     {
-        $application = $this->get($appid);
-        $result = $application->getClient()->get('/sns/jscode2session', [
-            'query' => [
-                'appid' => $application->getAccount()->getAppId(),
-                'secret' => $application->getAccount()->getSecret(),
-                'js_code' => $code,
-                'grant_type' => 'authorization_code',
+        $dy = $this->get($appid);
+        $client = $dy->http->client(options: [
+            'base_uri' => 'https://developer.toutiao.com',
+            'timeout' => 5,
+        ]);
+        $res = $client->post('/api/apps/v2/jscode2session', [
+            'json' => [
+                'appid' => $dy->config->getAppId(),
+                'secret' => $dy->config->getAppSecret(),
+                'code' => $code,
+                'anonymous_code' => '',
             ],
         ]);
 
-        return Json::decode($result->getContent());
+        return Json::decode((string) $res->getBody())['data'] ?? [];
     }
 }

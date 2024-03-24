@@ -51,6 +51,7 @@
         "hyperf/server": "3.1.*",
         "hyperf/snowflake": "3.1.*",
         "hyperf/utils": "3.1.*",
+        "limingxinleo/douyin-openapi": "^0.2.0",
         "limingxinleo/easywechat-classmap": "^1.0",
         "limingxinleo/hyperf-utils": "^3.9",
         "limingxinleo/idempotent": "^0.3.1",

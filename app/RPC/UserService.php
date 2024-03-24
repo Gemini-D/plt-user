@@ -15,6 +15,7 @@ namespace App\RPC;
 use App\Constants\ErrorCode;
 use App\Exception\BusinessException;
 use App\Service\Dao\UserDao;
+use App\Service\SubService\DouYinService;
 use App\Service\SubService\WeChatService;
 use GeminiD\PltCommon\Constant\OAuthType;
 use GeminiD\PltCommon\RPC\User\UserInterface;
@@ -42,9 +43,13 @@ class UserService implements UserInterface
             $type = OAuthType::from($type);
         }
 
-        $res = di()->get(WeChatService::class)->login($code, $appid);
+        $res = match ($type) {
+            OAuthType::WECHAT_MINI_APP => di()->get(WeChatService::class)->login($code, $appid),
+            OAuthType::DOUYIN_MINI_APP => di()->get(DouYinService::class)->login($code, $appid),
+        };
+
         if (empty($res['openid'])) {
-            throw new BusinessException(ErrorCode::WECHAT_CODE_INVALID);
+            throw new BusinessException(ErrorCode::MP_CODE_INVALID);
         }
 
         $user = $this->idempotent->run('first-user-by-openid:' . $res['openid'], fn () => di()->get(UserDao::class)->firstOrCreate($res['openid'], $appid, $type));

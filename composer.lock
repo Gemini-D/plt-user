@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39b5b62c976ff0ba2cd149ef8078747a",
+    "content-hash": "646522815a755c645c8b2a19235daa7b",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -4138,6 +4138,69 @@
             "time": "2024-01-19T12:39:49+00:00"
         },
         {
+            "name": "limingxinleo/douyin-openapi",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/limingxinleo/douyin-openapi.git",
+                "reference": "8a4d1a4543ae162b4834b11adc54cb2048fd3f7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/limingxinleo/douyin-openapi/zipball/8a4d1a4543ae162b4834b11adc54cb2048fd3f7e",
+                "reference": "8a4d1a4543ae162b4834b11adc54cb2048fd3f7e",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.8",
+                "hyperf/codec": "^3.1",
+                "hyperf/collection": "^3.1",
+                "hyperf/support": "^3.1",
+                "jetbrains/phpstorm-attributes": "^1.0",
+                "php": ">=8.1",
+                "pimple/pimple": "^3.5",
+                "psr/simple-cache": "^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "hyperf/redis": "^3.1",
+                "mockery/mockery": "^1.0",
+                "phpstan/phpstan": "^1.0",
+                "phpunit/phpunit": "^10.0",
+                "swoole/ide-helper": "dev-master"
+            },
+            "suggest": {
+                "swow/swow": "Required to create swow components."
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "Fan\\DouYin\\OpenApi\\ConfigProvider"
+                },
+                "branch-alias": {
+                    "dev-main": "0.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fan\\DouYin\\OpenApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "keywords": [
+                "hyperf",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/limingxinleo/douyin-openapi/issues",
+                "source": "https://github.com/limingxinleo/douyin-openapi/tree/v0.2.0"
+            },
+            "time": "2024-03-22T09:27:01+00:00"
+        },
+        {
             "name": "limingxinleo/easywechat-classmap",
             "version": "v1.0.2",
             "source": {
@@ -5171,6 +5234,59 @@
                 }
             ],
             "time": "2023-11-12T21:59:55+00:00"
+        },
+        {
+            "name": "pimple/pimple",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silexphp/Pimple.git",
+                "reference": "a94b3a4db7fb774b3d78dad2315ddc07629e1bed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/a94b3a4db7fb774b3d78dad2315ddc07629e1bed",
+                "reference": "a94b3a4db7fb774b3d78dad2315ddc07629e1bed",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "psr/container": "^1.1 || ^2.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^5.4@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Pimple": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Pimple, a simple Dependency Injection Container",
+            "homepage": "https://pimple.symfony.com",
+            "keywords": [
+                "container",
+                "dependency injection"
+            ],
+            "support": {
+                "source": "https://github.com/silexphp/Pimple/tree/v3.5.0"
+            },
+            "time": "2021-10-28T11:13:42+00:00"
         },
         {
             "name": "psr/cache",

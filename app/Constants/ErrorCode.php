@@ -26,14 +26,14 @@ enum ErrorCode: int implements ErrorCodeInterface
     case SERVER_ERROR = 500;
 
     /**
-     * @Message("微信小程序 AppID 不存在")
+     * @Message("AppID 不存在")
      */
-    case WECHAT_APPID_NOT_EXIST = 1001;
+    case APPID_NOT_EXIST = 1001;
 
     /**
      * @Message("微信小程序 登录码已失效")
      */
-    case WECHAT_CODE_INVALID = 1002;
+    case MP_CODE_INVALID = 1002;
 
     /**
      * @Message("用户不存在")
