@@ -18,13 +18,18 @@ use App\Service\Dao\UserDao;
 use App\Service\SubService\WeChatService;
 use GeminiD\PltCommon\Constant\OAuthType;
 use GeminiD\PltCommon\RPC\User\UserInterface;
+use Hyperf\Di\Annotation\Inject;
 use Hyperf\RpcMultiplex\Constant;
 use Hyperf\RpcServer\Annotation\RpcService;
+use Idempotent\Idempotent;
 use JetBrains\PhpStorm\ArrayShape;
 
 #[RpcService(name: UserInterface::NAME, server: 'rpc', protocol: Constant::PROTOCOL_DEFAULT)]
 class UserService implements UserInterface
 {
+    #[Inject]
+    protected Idempotent $idempotent;
+
     public function ping(): bool
     {
         return true;
@@ -42,7 +47,7 @@ class UserService implements UserInterface
             throw new BusinessException(ErrorCode::WECHAT_CODE_INVALID);
         }
 
-        $user = di()->get(UserDao::class)->firstOrCreate($res['openid'], $appid, $type);
+        $user = $this->idempotent->run('first-user-by-openid:' . $res['openid'], fn() => di()->get(UserDao::class)->firstOrCreate($res['openid'], $appid, $type));
 
         return [
             'id' => $user->id,

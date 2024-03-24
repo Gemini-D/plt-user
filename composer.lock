@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f767a7777223750d520bc4418276004",
+    "content-hash": "39b5b62c976ff0ba2cd149ef8078747a",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -4263,6 +4263,66 @@
                 "source": "https://github.com/limingxinleo/hyperf-utils/tree/v3.9.2"
             },
             "time": "2023-12-25T12:30:57+00:00"
+        },
+        {
+            "name": "limingxinleo/idempotent",
+            "version": "v0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/limingxinleo/idempotent.git",
+                "reference": "ff2022d253605c77de599fa4807c51d1ed402bfe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/limingxinleo/idempotent/zipball/ff2022d253605c77de599fa4807c51d1ed402bfe",
+                "reference": "ff2022d253605c77de599fa4807c51d1ed402bfe",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/contract": "^2.2|^3.0",
+                "jetbrains/phpstorm-attributes": "^1.0",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "hyperf/redis": "^3.0",
+                "hyperf/utils": "^3.0",
+                "mockery/mockery": "^1.0",
+                "phpstan/phpstan": "^1.0",
+                "phpunit/phpunit": ">=7.0",
+                "swoole/ide-helper": "^4.7"
+            },
+            "suggest": {
+                "ext-redis": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.2-dev"
+                },
+                "hyperf": {
+                    "config": "Idempotent\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Idempotent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Making multiple identical function calls has the same effect as making a single function call.",
+            "keywords": [
+                "hyperf",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/limingxinleo/idempotent/issues",
+                "source": "https://github.com/limingxinleo/idempotent/tree/v0.3.1"
+            },
+            "time": "2023-06-28T03:56:37+00:00"
         },
         {
             "name": "markrogoyski/math-php",
