@@ -16,6 +16,7 @@ use App\Constants\ErrorCode;
 use App\Exception\BusinessException;
 use Fan\DouYin\OpenApi\Application;
 use Han\Utils\Service;
+use Hyperf\Codec\Json;
 use Hyperf\Config\Annotation\Value;
 use Psr\Container\ContainerInterface;
 
