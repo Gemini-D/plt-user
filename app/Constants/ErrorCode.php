@@ -40,7 +40,7 @@ enum ErrorCode: int implements ErrorCodeInterface
      */
     case USER_NOT_EXIST = 1100;
 
-    public function getMessage(array $translate = null): string
+    public function getMessage(?array $translate = null): string
     {
         $arguments = [];
         if ($translate) {

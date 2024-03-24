@@ -47,7 +47,7 @@ class UserService implements UserInterface
             throw new BusinessException(ErrorCode::WECHAT_CODE_INVALID);
         }
 
-        $user = $this->idempotent->run('first-user-by-openid:' . $res['openid'], fn() => di()->get(UserDao::class)->firstOrCreate($res['openid'], $appid, $type));
+        $user = $this->idempotent->run('first-user-by-openid:' . $res['openid'], fn () => di()->get(UserDao::class)->firstOrCreate($res['openid'], $appid, $type));
 
         return [
             'id' => $user->id,
